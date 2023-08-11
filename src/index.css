@@ -1,3 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Montserrat:wght@700&family=Poppins:wght@900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+    --c-black: #000000;
+    --c-white:#EEEEEE;
+    --c-primary:#4E4FEB;
+    --c-secondry:#068FFF;
+    --c-bg: #101645;
+    --c-text: #f1f1f1;
+}
+
+
+body {
+    background-color: var(--c-black);
+    color: var(--c-text);
+}

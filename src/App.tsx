@@ -1,10 +1,21 @@
+import { Routes, Route, BrowserRouter } from "react-router-dom";
+import Home from "./pages/Home"
+import Layot from "./components/Layot";
+
+
+
 
 const App = () => {
 
   return (
-    <div className="text-3xl text-center text-red-500 font-bold underline">
-      App
-    </div>
+    <BrowserRouter>
+      <Layot>
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </Layot>
+
+    </BrowserRouter>
   )
 }
 
