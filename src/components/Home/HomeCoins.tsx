@@ -1,4 +1,4 @@
-import Tooltip from "../tooltip/Tooltip"
+import Tooltip from "../designs/tooltip/Tooltip"
 
 const homeCoinsData = [
     {

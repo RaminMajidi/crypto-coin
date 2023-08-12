@@ -1,5 +1,5 @@
-import HomeLanding from "../components/designs/homeLanding/HomeLanding"
-import Companies from "../components/designs/companies/Companies"
+import HomeLanding from "../components/Home/HomeLanding"
+import Companies from "../components/Home/Companies"
 type Props = {}
 
 const Home = (props: Props) => {
