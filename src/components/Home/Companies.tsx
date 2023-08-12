@@ -32,7 +32,7 @@ const companiesData = [
 
 const Companies = () => {
     return (
-        <div className="w-[96%] border-[var(--c-text)] my-2 border-b-2 border-t-2 mx-auto py-10 ">
+        <div className="w-[96%] border-[var(--c-text)] mb-2 border-b-2 border-t-2 mx-auto py-10 ">
             <h3 className="text-center mb-8 text-lg font-bold md:text-2xl">
                 Join the 20,000+ companies using the our platform
             </h3>
