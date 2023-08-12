@@ -7,17 +7,24 @@
     --c-black: #000000;
     --c-white: #f1f1f1;
     --c-secondry: #0074d9;
-    --c-text: #f1f1f1;
-    --c-bg: #2e2e2e;
-}
+    --c-text: #0b1625;
+    --c-bg: #EEEEEE;
 
+}
 body.dark {
-    --c-text: #2e2e2e;
-    --c-bg: #f1f1f1;
+    --c-text: #EEEEEE;
+    --c-bg: #0b1625;
 }
-
 
 body {
     background-color: var(--c-bg);
     color: var(--c-text);
+}
+
+.bg-glass {
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }

@@ -14,8 +14,8 @@ const Navbar = () => {
   }
 
   return (
-    <header className='w-full fixed top-0 left-0 border-b-2 border-[var(--c-secondry)]
-    flex justify-between items-center px-2 py-1 h-[10dvh]'>
+    <header className='w-full fixed top-0 left-0
+    flex justify-between items-center px-2 py-1 h-[10dvh] bg-glass'>
       <div className="w-36 h-2/3 p-1">
         <img
           className="w-full h-full cursor-pointer"

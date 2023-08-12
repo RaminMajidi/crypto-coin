@@ -2,7 +2,8 @@ import "./DarkSwitch.css"
 const DarkSwitch = () => {
 
     const darkModeHandler = (value: boolean) => {
-        value ? document.getElementById("BODY")?.classList.add("dark") : document.getElementById("BODY")?.classList.remove("dark")
+        console.log(value);
+        value ? document.getElementById("BODY")?.classList.remove("dark") : document.getElementById("BODY")?.classList.add("dark")
     }
 
     return (
