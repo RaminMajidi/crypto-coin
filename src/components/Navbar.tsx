@@ -1,5 +1,6 @@
 import { useState } from "react"
-import { Link, useNavigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
+import DarkSwitch from "./designs/toggleSwitch/DarkSwitch";
 
 
 const Navbar = () => {
@@ -13,14 +14,14 @@ const Navbar = () => {
   }
 
   return (
-    <header className='w-full fixed top-0 left-0 border-b-2 border-blue-500
-    flex justify-between items-center px-2 py-1 h-[60px]'>
+    <header className='w-full fixed top-0 left-0 border-b-2 border-[var(--c-secondry)]
+    flex justify-between items-center px-2 py-1 h-[10dvh]'>
       <div className="w-36 h-2/3 p-1">
         <img
           className="w-full h-full cursor-pointer"
           src="/images/logo.png" />
       </div>
-      <nav className="text-lg">
+      <nav className="text-lg flex justify-around">
         <button
           onClick={() => navigateHndler("")}
           type="button"
@@ -44,6 +45,9 @@ const Navbar = () => {
             : ""} mx-2 hover:text-blue-500 transition`}>
           NEWS
         </button>
+        <div className="mx-1">
+          <DarkSwitch />
+        </div>
       </nav>
     </header>
   )

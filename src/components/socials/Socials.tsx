@@ -19,18 +19,16 @@ const socilasData = [
     }
 ]
 
-
-
 const Socials = () => {
     return (
-        <div className="text-slate-200 flex p-1">
+        <>
             {socilasData.map((item) => (
                 <SocialItem
                     key={item.icon}
                     icon={item.icon}
                     url={item.url} />
             ))}
-        </div>
+        </>
     )
 }
 

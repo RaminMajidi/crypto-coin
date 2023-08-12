@@ -3,10 +3,12 @@ import { Link } from "react-router-dom"
 
 
 const Footer = () => {
+
   return (
     <footer className="w-full relative px-3 py-6 grid
-     grid-cols-12 gap-2  border">
-      <article className="col-span-12 md:col-span-4">
+     grid-cols-12 gap-2 bg-slate-900 text-slate-100
+     bg-[url(/images/hero-shape-2.svg)] bg-cover bg-no-repeat bg-center">
+      <article className="col-span-12 md:col-span-6">
         <div className="w-2/3 p-2">
           <img
             className="w-full"
@@ -15,13 +17,13 @@ const Footer = () => {
             alt="logo" />
         </div>
         <div className=" p-2">
-          <p className="text-slate-300 text-justify p-1">
+          <p className="text-justify p-1">
             Lorem ipsum dolor sit amet, consectetur
             adipiscing elit. Nam vitae quam nec ante
             fringilla vel at erat convallis elit.
           </p>
         </div>
-        <div>
+        <div className="flex">
           <Socials />
         </div>
       </article>
@@ -30,38 +32,35 @@ const Footer = () => {
         <h3 className="text-3xl mb-2 ">Quick Links</h3>
         <div className="flex flex-col gap-2">
           <Link
-            className="text-blue-500 text-lg"
+            className="text-[var(--c-secondry)] w-max text-lg"
             to={"/"}>
             CryptoCoin
           </Link>
           <Link
-            className="text-blue-500 text-lg"
+            className="text-[var(--c-secondry)] w-max text-lg"
             to={"/signin"}>
             Sign in
           </Link>
           <Link
-            className="text-blue-500 text-lg"
+            className="text-[var(--c-secondry)] w-max text-lg"
             target="_blank"
             to={"https://www.coingecko.com/en/api/documentation"}>
             CryptoApi
           </Link>
           <Link
-            className="text-blue-500 text-lg"
+            className="text-[var(--c-secondry)] w-max text-lg"
             target="_blank"
             to={"https://www.coingecko.com/en/news"}>
             CryptoNews
           </Link>
-
-
         </div>
-
       </article>
 
-      <article className="col-span-12 md:col-span-4 border">
-
+      <article className="col-span-12 md:col-span-2 text-center">
+        <img
+          className="w-2 md:w-full mx-auto"
+          src="/images/bitcoin.png" alt="" />
       </article>
-
-
     </footer>
   )
 }

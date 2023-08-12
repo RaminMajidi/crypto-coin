@@ -5,15 +5,19 @@
 
 :root {
     --c-black: #000000;
-    --c-white:#EEEEEE;
-    --c-primary:#4E4FEB;
-    --c-secondry:#068FFF;
-    --c-bg: #101645;
+    --c-white: #f1f1f1;
+    --c-secondry: #0074d9;
     --c-text: #f1f1f1;
+    --c-bg: #2e2e2e;
+}
+
+body.dark {
+    --c-text: #2e2e2e;
+    --c-bg: #f1f1f1;
 }
 
 
 body {
-    background-color: var(--c-black);
+    background-color: var(--c-bg);
     color: var(--c-text);
 }
