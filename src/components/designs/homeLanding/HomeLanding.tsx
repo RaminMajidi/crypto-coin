@@ -1,4 +1,4 @@
-import HomeCoins from '../../socials/homeCoins/HomeCoins'
+import HomeCoins from '../../designs/homeCoins/HomeCoins'
 
 const HomeLanding = () => {
     return (
