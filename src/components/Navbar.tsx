@@ -32,11 +32,11 @@ const Navbar = () => {
         </button>
 
         <button
-          onClick={() => navigateHndler("NFT")}
+          onClick={() => navigateHndler("coins")}
           type="button"
-          className={`${active === "NFT" ? "text-[var(--c-secondry)] font-bold"
+          className={`${active === "coins" ? "text-[var(--c-secondry)] font-bold"
             : ""} mx-2 hover:text-blue-500 transition`}>
-          NFT
+          COINS
         </button>
 
         <button
