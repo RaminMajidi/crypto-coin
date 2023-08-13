@@ -38,7 +38,7 @@ const Companies = () => {
             </h3>
             <div className="flex  flex-wrap justify-center items-center">
                 {companiesData.map(item => (
-                    <div className="group 
+                    <div key={item.title} className="group 
                      relative mx-2 md:mx-4 my-4">
                         <Tooltip title={item.title} />
                         <Link to={item.url} target="_blank">

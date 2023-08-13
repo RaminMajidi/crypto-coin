@@ -7,13 +7,17 @@
     --c-black: #000000;
     --c-white: #f1f1f1;
     --c-secondry: #3e7dff;
-    --c-text: #0b1625;
-    --c-bg: #EEEEEE;
+    --c-text: #080321;
+    --c-bg: #fff;
+    --c-base: #bdc0c9;
+
 
 }
+
 body.dark {
-    --c-text: #EEEEEE;
-    --c-bg: #0b1625;
+    --c-text: #fff;
+    --c-bg: #080321;
+    --c-base: #131b4d;
 }
 
 body {
@@ -26,5 +30,4 @@ body {
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
 }

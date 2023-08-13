@@ -63,8 +63,6 @@ const CryptoFeaures = () => {
                     />
                 ))}
             </article>
-
-
         </section>
     )
 }

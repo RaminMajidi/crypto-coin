@@ -14,7 +14,7 @@ const FeatureItem = ({ icon, title, desc }: Props) => {
 
             <div className='w-20 h-20 bg-[var(--c-secondry)] flex 
             justify-center items-center rounded-full'>
-                <i className={`bx ${icon} text-5xl`}></i>
+                <i className={`bx ${icon} text-5xl text-[var(--c-white)]`}></i>
             </div>
 
             <h4 className='text-3xl mt-4'>{title}</h4>
