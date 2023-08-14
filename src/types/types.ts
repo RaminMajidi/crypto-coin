@@ -26,3 +26,8 @@ export type coinType = {
     total_supply: number,
     total_volume: number,
 }
+
+
+export type coinDataType = {
+    prices: [[number, number]]
+}

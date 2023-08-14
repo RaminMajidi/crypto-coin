@@ -41,7 +41,7 @@ const CoinsTable = ({ data }: Props) => {
                                     <Link
                                         title={coins.name}
                                         className='absolute top-0 left-0 w-full h-full'
-                                        to={`/coin/${coins.id}`}
+                                        to={`/coins/${coins.id}`}
                                         key={coins.id}>
                                     </Link>
                                 </tr>
