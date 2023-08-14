@@ -1,17 +1,21 @@
-import { useState, useEffect } from "react"
+import { useState, useEffect, useContext } from "react"
 import axios from "axios"
 import { Alert } from "../utils/alerts"
 import CoinsTable from "../components/Coins/Coins"
 import TableLoader from "../components/Coins/TableLoader"
+import { NavContext } from "../context/NavActiveContext"
 
 const Coins = () => {
+
+    const { setNavActive } = useContext(NavContext)
+    setNavActive("coins")
 
     const [coins, setCoins] = useState<[]>([])
     const [loading, setLoading] = useState(false);
 
     let url = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false`
     useEffect(() => {
- 
+
         const getData = async () => {
             try {
                 setLoading(true);

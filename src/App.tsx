@@ -1,26 +1,30 @@
+import React from "react"
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import Home from "./pages/Home"
 import Coins from "./pages/Coins";
 import Layout from "./components/Layout";
 import Coin from "./pages/Coin";
-
-
-
+import { NavContext, NavType } from "./context/NavActiveContext";
 
 const App = () => {
 
-  return (
-    <BrowserRouter>
-      <Layout>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/coins" element={<Coins />} >
-          <Route path=':coinId' element={<Coin />} />
-          </Route>
-        </Routes>
-      </Layout>
+  const [navActive, setNavActive] = React.useState<NavType>("");
 
-    </BrowserRouter>
+  return (
+    <NavContext.Provider value={{ navActive, setNavActive }}>
+      <BrowserRouter>
+        <Layout>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/coins" element={<Coins />} >
+              <Route path=':coinId' element={<Coin />} />
+            </Route>
+          </Routes>
+        </Layout>
+
+      </BrowserRouter>
+    </NavContext.Provider>
+
   )
 }
 
