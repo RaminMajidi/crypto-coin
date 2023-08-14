@@ -4,6 +4,7 @@ import CryptoFeaures from "../components/Home/CryptoFeaures"
 import TokenSale from "../components/Home/TokenSale"
 
 
+
 type Props = {}
 
 const Home = (props: Props) => {
