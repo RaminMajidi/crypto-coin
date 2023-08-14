@@ -3,6 +3,8 @@ import axios from "axios"
 import { Alert } from "../utils/alerts"
 import { Link } from "react-router-dom"
 import CoinsTable from "../components/Coins/Coins"
+import TableLoader from "../components/Coins/TableLoader"
+import { data } from "../components/Home/TokenSale"
 
 
 type Props = {}
@@ -22,10 +24,8 @@ const Coins = (props: Props) => {
             try {
                 setLoading(true);
                 const res = await axios.get(url);
-                console.log(res);
                 if (res.status === 200) {
                     const data = await res.data
-                    console.log(data);
                     setCoins(data);
                 }
                 else {
@@ -43,7 +43,19 @@ const Coins = (props: Props) => {
 
     return (
         <section className="">
-            <CoinsTable data={coins} />
+            {loading ?
+                (
+                    <TableLoader />
+                ) :
+                coins.length ?
+                    (<CoinsTable data={coins} />)
+                    :
+                    (
+                        <h3 className="text-red-500 text-center text-3xl p-2">
+                            Item Not Found
+                        </h3>
+                    )
+            }
         </section>
     )
 }

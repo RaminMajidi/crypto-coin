@@ -1,8 +1,6 @@
 import CoinItem from './CoinItem'
 import { coinType } from "../../types/types"
 import { Link } from 'react-router-dom'
-import Tooltip from '../designs/tooltip/Tooltip'
-
 
 type Props = {
     data: coinType[]
@@ -24,7 +22,7 @@ const CoinsTable = ({ data }: Props) => {
                 <tbody>
                     {data.map(coins => {
                         return (
-                            <tr className='relative
+                            <tr key={coins.id} className='relative
                              hover:bg-[var(--c-secondry)]
                               transition'>
 
@@ -37,8 +35,6 @@ const CoinsTable = ({ data }: Props) => {
                                     symbol={coins.symbol}
                                     total_volume={coins.total_volume}
                                     key={coins.id}
-                                    coin_id={coins.id}
-
                                 />
 
                                 <Link
@@ -47,7 +43,6 @@ const CoinsTable = ({ data }: Props) => {
                                     to={`/coin/${coins.id}`}
                                     key={coins.id}>
                                 </Link>
-
                             </tr>
                         )
                     })}

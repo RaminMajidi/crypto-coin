@@ -9,7 +9,6 @@ type Props = {
     price_change_percentage_24h: number,
     total_volume: number,
     market_cap: number,
-    coin_id: string
 }
 
 const CoinItem = ({
@@ -20,7 +19,6 @@ const CoinItem = ({
     price_change_percentage_24h,
     total_volume,
     market_cap,
-    coin_id,
 }: Props) => {
     return (
         <>
