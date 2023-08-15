@@ -3,7 +3,7 @@ import React from "react";
 export type NavType = "home" | "coins" | "exchanges" | ""
 
 interface ContextPrpos {
-    navActive: NavType | null
+    navActive: NavType 
     setNavActive: (navActive: NavType) => void
 }
 

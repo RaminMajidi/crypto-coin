@@ -22,7 +22,6 @@ const App = () => {
             <Route path='/exchanges' element={<Exchanges />} />
           </Routes>
         </Layout>
-
       </BrowserRouter>
     </NavContext.Provider>
 

@@ -5,19 +5,17 @@ import TableExchanges from "../components/Exchanges/TableExchanges"
 import TableLoader from "../components/Coins/TableLoader"
 import { NavContext } from "../context/NavActiveContext"
 import NotItem from "../components/designs/notItem/NotItem"
-import { exchangesType } from "../types/types"
 
 
 const Exchanges = () => {
     const { setNavActive } = useContext(NavContext)
-    setNavActive("exchanges")
 
     const [loading, setLoading] = useState(false);
     const [exchanges, setExchanges] = useState<[]>([])
 
     const url = `https://api.coingecko.com/api/v3/exchanges?per_page=100&page=1`
     useEffect(() => {
-
+        setNavActive("exchanges")
         const getData = async () => {
             try {
                 setLoading(true);
@@ -42,9 +40,6 @@ const Exchanges = () => {
         }
         getData();
     }, [])
-
-
-
 
     return (
         <section className="">

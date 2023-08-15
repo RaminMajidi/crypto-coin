@@ -3,14 +3,15 @@ import Companies from "../components/Home/Companies"
 import CryptoFeaures from "../components/Home/CryptoFeaures"
 import TokenSale from "../components/Home/TokenSale"
 import { NavContext } from "../context/NavActiveContext"
-import { useContext } from "react"
+import { useContext, useEffect } from "react"
 
 
 const Home = () => {
 
   const { setNavActive } = useContext(NavContext)
-  setNavActive("home")
-
+  useEffect(() => {
+    setNavActive("home")
+  }, [])
   return (
     <>
       <HomeLanding />
