@@ -11,11 +11,10 @@ const HomeLanding = () => {
             <p
                 className="text-base md:text-xl w-2/3 md:w-2/4 mx-auto
            mt-10 px-3 text-center"
-            >Crypto Currency, Blockchain, ICO, Web3 related website
-                template crafted with Tailwind CSS. Comes with all essential
-                UI components and pages to launch complete website or
-                landing page for anything that related to Crypto,
-                Blockchain and Web3.
+            >Crypto Currency,Our website is a platform for you to
+                familiarize yourself with the topics of digital currencies
+                and top exchanges in the world. This website is always
+                improving the service for you
             </p>
             <div className="flex mt-14 justify-center items-center">
                 <HomeCoins />

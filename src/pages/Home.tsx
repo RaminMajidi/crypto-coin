@@ -5,9 +5,8 @@ import TokenSale from "../components/Home/TokenSale"
 import { NavContext } from "../context/NavActiveContext"
 import { useContext } from "react"
 
-type Props = {}
 
-const Home = (props: Props) => {
+const Home = () => {
 
   const { setNavActive } = useContext(NavContext)
   setNavActive("home")

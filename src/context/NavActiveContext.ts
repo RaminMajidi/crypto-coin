@@ -1,6 +1,6 @@
 import React from "react";
 
-export type NavType = "home" | "coins" | ""
+export type NavType = "home" | "coins" | "exchanges" | ""
 
 interface ContextPrpos {
     navActive: NavType | null

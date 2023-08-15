@@ -1,29 +1,32 @@
 import axios from "axios"
-import { useEffect, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import { Alert } from "../utils/alerts"
 import HistoryChart from "../components/Coins/HistoryChart"
+import NotItem from "../components/designs/notItem/NotItem"
+import { NavContext } from "../context/NavActiveContext"
 
 
-type coinData = {
-  id: string;
-  image: string;
-  name: string;
-  description: string;
-}
+type coinData =
+  {
+    id: string;
+    image: string;
+    name: string;
+    description: string;
+  }
 
 const Coin = () => {
 
+  const { setNavActive } = useContext(NavContext)
+  setNavActive("")
+
   const { coinId } = useParams()
   const [coin, setCoin] = useState<coinData>()
-  const [loading, setLoading] = useState<boolean>(false);
-
   const url = `https://api.coingecko.com/api/v3/coins/${coinId}?localization=false&tickers=false&market_data=false&community_data=false&sparkline=false`
   useEffect(() => {
 
     const getData = async () => {
       try {
-        setLoading(true);
         const res = await axios.get(url, {
           headers: {
             "Content-Type": "application/json"
@@ -44,9 +47,6 @@ const Coin = () => {
         }
       } catch (error) {
         Alert("Error", "Request limit, try again in a few moments", "error")
-      }
-      finally {
-        setLoading(false);
       }
     }
     getData();
@@ -71,9 +71,11 @@ const Coin = () => {
                 dangerouslySetInnerHTML={{ __html: coin.description }}></p>
             </div>
           </section >
-        ) : (
-          <h3 className="text-center text-red-600 text-2xl">not found</h3>
         )
+          :
+          (
+            <NotItem />
+          )
       }
     </>
   )

@@ -1,5 +1,3 @@
-import { Link } from "react-router-dom"
-
 
 type Props = {
     market_cap_rank: number,

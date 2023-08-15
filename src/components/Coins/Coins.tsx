@@ -51,7 +51,6 @@ const CoinsTable = ({ data }: Props) => {
                 </table>
             </div>
         </>
-
     )
 }
 

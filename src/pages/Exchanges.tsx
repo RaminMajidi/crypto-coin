@@ -1,20 +1,21 @@
 import { useState, useEffect, useContext } from "react"
 import axios from "axios"
 import { Alert } from "../utils/alerts"
-import CoinsTable from "../components/Coins/Coins"
+import TableExchanges from "../components/Exchanges/TableExchanges"
 import TableLoader from "../components/Coins/TableLoader"
 import { NavContext } from "../context/NavActiveContext"
 import NotItem from "../components/designs/notItem/NotItem"
+import { exchangesType } from "../types/types"
 
-const Coins = () => {
 
+const Exchanges = () => {
     const { setNavActive } = useContext(NavContext)
-    setNavActive("coins")
+    setNavActive("exchanges")
 
     const [loading, setLoading] = useState(false);
-    const [coins, setCoins] = useState<[]>([])
+    const [exchanges, setExchanges] = useState<[]>([])
 
-    const url = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false`
+    const url = `https://api.coingecko.com/api/v3/exchanges?per_page=100&page=1`
     useEffect(() => {
 
         const getData = async () => {
@@ -27,7 +28,7 @@ const Coins = () => {
                 });
                 if (res.status === 200) {
                     const data = await res.data
-                    setCoins(data);
+                    setExchanges(data);
                 }
                 else {
                     Alert("warning", res.status.toString(), "warning")
@@ -42,15 +43,18 @@ const Coins = () => {
         getData();
     }, [])
 
+
+
+
     return (
         <section className="">
             {loading ?
                 (
                     <TableLoader />
                 ) :
-                coins.length ?
-                    (<CoinsTable
-                        data={coins} />)
+                exchanges.length ?
+                    (<TableExchanges
+                        data={exchanges} />)
                     :
                     (
                         <NotItem />
@@ -60,4 +64,4 @@ const Coins = () => {
     )
 }
 
-export default Coins
+export default Exchanges

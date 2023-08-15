@@ -22,7 +22,7 @@ const Navbar = () => {
           onClick={() => navigate("")}
           type="button"
           className={`${navActive === "home" ? "text-[var(--c-secondry)] font-semibold"
-            : ""} mx-2 hover:text-blue-500 transition`}>
+            : ""} mx-2 hover:text-blue-500 transition uppercase`}>
           HOME
         </button>
 
@@ -30,8 +30,16 @@ const Navbar = () => {
           onClick={() => navigate("coins")}
           type="button"
           className={`${navActive === "coins" ? "text-[var(--c-secondry)] font-semibold"
-            : ""} mx-2 hover:text-blue-500 transition`}>
+            : ""} mx-2 hover:text-blue-500 transition uppercase`}>
           COINS
+        </button>
+
+        <button
+          onClick={() => navigate("exchanges")}
+          type="button"
+          className={`${navActive === "exchanges" ? "text-[var(--c-secondry)] font-semibold"
+            : ""} mx-2 hover:text-blue-500 transition uppercase`}>
+          Exchange
         </button>
       </nav>
       <div className="mx-1">
