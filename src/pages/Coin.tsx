@@ -5,7 +5,8 @@ import { Alert } from "../utils/alerts"
 import HistoryChart from "../components/Coins/HistoryChart"
 import NotItem from "../components/designs/notItem/NotItem"
 import { NavContext } from "../context/NavActiveContext"
-
+import { Suspense } from "react"
+import Loading from "../components/designs/loading/Index"
 
 type coinData =
   {
@@ -54,30 +55,32 @@ const Coin = () => {
 
 
   return (
-    <>
-      {
-        coin ? (
-          <section className="max-w-5xl mx-auto">
-            <HistoryChart id={coin.id} />
-            <div className=" bg-glass px-8 py-4 mt-20 mb-4 rounded-xl">
-              <img
-                className="rounded-full w-12 h-12 bg-slate-50"
-                src={coin.image} />
-              <h2 className="text-[var(--c-secondry)] text-2xl">
-                {coin.name}
-              </h2>
-              <p
-                className="[&>a]:text-blue-600 [&>a]:underline text-justify"
-                dangerouslySetInnerHTML={{ __html: coin.description }}></p>
-            </div>
-          </section >
-        )
-          :
-          (
-            <NotItem />
+    <Suspense fallback={<Loading />}>
+      <>
+        {
+          coin ? (
+            <section className="max-w-5xl mx-auto">
+              <HistoryChart id={coin.id} />
+              <div className=" bg-glass px-8 py-4 mt-20 mb-4 rounded-xl">
+                <img
+                  className="rounded-full w-12 h-12 bg-slate-50"
+                  src={coin.image} />
+                <h2 className="text-[var(--c-secondry)] text-2xl">
+                  {coin.name}
+                </h2>
+                <p
+                  className="[&>a]:text-blue-600 [&>a]:underline text-justify"
+                  dangerouslySetInnerHTML={{ __html: coin.description }}></p>
+              </div>
+            </section >
           )
-      }
-    </>
+            :
+            (
+              <NotItem />
+            )
+        }
+      </>
+    </Suspense>
   )
 }
 

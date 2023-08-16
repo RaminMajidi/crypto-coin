@@ -17,7 +17,7 @@ const Footer = () => {
             alt="logo" />
         </div>
         <div className=" p-2">
-          <p className="text-justify p-1">
+          <p className="text-justify p-1 w-3/5">
             Lorem ipsum dolor sit amet, consectetur
             adipiscing elit. Nam vitae quam nec ante
             fringilla vel at erat convallis elit.
@@ -35,11 +35,6 @@ const Footer = () => {
             className="text-[var(--c-secondry)] w-max text-lg"
             to={"/"}>
             CryptoCoin
-          </Link>
-          <Link
-            className="text-[var(--c-secondry)] w-max text-lg"
-            to={"/signin"}>
-            Sign in
           </Link>
           <Link
             className="text-[var(--c-secondry)] w-max text-lg"

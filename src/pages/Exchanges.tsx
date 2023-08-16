@@ -5,6 +5,9 @@ import TableExchanges from "../components/Exchanges/TableExchanges"
 import TableLoader from "../components/Coins/TableLoader"
 import { NavContext } from "../context/NavActiveContext"
 import NotItem from "../components/designs/notItem/NotItem"
+import { Suspense } from "react"
+import Loading from "../components/designs/loading/Index"
+
 
 
 const Exchanges = () => {
@@ -42,20 +45,23 @@ const Exchanges = () => {
     }, [])
 
     return (
-        <section className="">
-            {loading ?
-                (
-                    <TableLoader />
-                ) :
-                exchanges.length ?
-                    (<TableExchanges
-                        data={exchanges} />)
-                    :
+        <Suspense fallback={<Loading/>}>
+            <section className="">
+                {loading ?
                     (
-                        <NotItem />
-                    )
-            }
-        </section>
+                        <TableLoader />
+                    ) :
+                    exchanges.length ?
+                        (<TableExchanges
+                            data={exchanges} />)
+                        :
+                        (
+                            <NotItem />
+                        )
+                }
+            </section>
+        </Suspense>
+
     )
 }
 

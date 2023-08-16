@@ -41,7 +41,7 @@ const Companies = () => {
                     <div key={item.title} className="group 
                      relative mx-2 md:mx-4 my-4">
                         <Tooltip title={item.title} />
-                        <Link to={item.url} target="_blank">
+                        <Link to={item.url}>
                             <img
                                 className=" group"
                                 src={item.img}

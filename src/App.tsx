@@ -5,7 +5,9 @@ import Coins from "./pages/Coins";
 import Exchanges from "./pages/Exchanges";
 import Layout from "./components/Layout";
 import Coin from "./pages/Coin";
+import Erro404 from './components/designs/error404'
 import { NavContext, NavType } from "./context/NavActiveContext";
+
 
 const App = () => {
 
@@ -20,6 +22,7 @@ const App = () => {
             <Route path="/coins" element={<Coins />} />
             <Route path='/coins/:coinId' element={<Coin />} />
             <Route path='/exchanges' element={<Exchanges />} />
+            <Route path='*' element={<Erro404 />} />
           </Routes>
         </Layout>
       </BrowserRouter>

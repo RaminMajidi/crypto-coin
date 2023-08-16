@@ -4,6 +4,8 @@ import CryptoFeaures from "../components/Home/CryptoFeaures"
 import TokenSale from "../components/Home/TokenSale"
 import { NavContext } from "../context/NavActiveContext"
 import { useContext, useEffect } from "react"
+import { Suspense } from "react"
+import Loading from "../components/designs/loading/Index"
 
 
 const Home = () => {
@@ -14,10 +16,13 @@ const Home = () => {
   }, [])
   return (
     <>
-      <HomeLanding />
-      <Companies />
-      <CryptoFeaures />
-      <TokenSale />
+      <Suspense fallback={<Loading />}>
+        <HomeLanding />
+        <Companies />
+        <CryptoFeaures />
+        <TokenSale />
+      </Suspense>
+
     </>
   )
 }
