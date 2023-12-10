@@ -19,7 +19,7 @@ const ExchangeItem = ({
             </td>
             <td className="p-2 hidden sm:table-cell">{year_established}</td>
             <td className="p-2 hidden sm:table-cell">{country}</td>
-            <td className='p-2'>{trade_volume_24h_btc.toFixed(6)}</td>
+            <td className='p-2'>{trade_volume_24h_btc.toFixed(3)}</td>
         </>
     )
 }

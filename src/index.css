@@ -10,8 +10,6 @@
     --c-text: #080321;
     --c-bg: #fff;
     --c-base: #bdc0c9;
-
-
 }
 
 body.dark {
@@ -34,4 +32,10 @@ body {
 
 tr:nth-child(even) {
     background-color: #acadb13f;
+}
+
+table th,
+table td{
+    min-width: min-content;
+    padding: 0 .7rem;
 }

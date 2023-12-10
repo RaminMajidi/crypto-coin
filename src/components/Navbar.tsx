@@ -22,7 +22,7 @@ const Navbar = () => {
           onClick={() => navigate("")}
           type="button"
           className={`${navActive === "home" ? "text-[var(--c-secondry)] font-semibold"
-            : ""} mx-2 hover:text-blue-500 transition uppercase`}>
+            : ""} mx-1 hover:text-blue-500 transition uppercase`}>
           HOME
         </button>
 
@@ -30,7 +30,7 @@ const Navbar = () => {
           onClick={() => navigate("coins")}
           type="button"
           className={`${navActive === "coins" ? "text-[var(--c-secondry)] font-semibold"
-            : ""} mx-2 hover:text-blue-500 transition uppercase`}>
+            : ""} mx-1 hover:text-blue-500 transition uppercase`}>
           COINS
         </button>
 
@@ -38,7 +38,7 @@ const Navbar = () => {
           onClick={() => navigate("exchanges")}
           type="button"
           className={`${navActive === "exchanges" ? "text-[var(--c-secondry)] font-semibold"
-            : ""} mx-2 hover:text-blue-500 transition uppercase`}>
+            : ""} mx-1 hover:text-blue-500 transition uppercase`}>
           Exchange
         </button>
       </nav>

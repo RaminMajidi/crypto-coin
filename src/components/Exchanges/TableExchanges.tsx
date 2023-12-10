@@ -11,6 +11,7 @@ const TableExchanges = ({ data }: Props) => {
         <>
             <div className='mt-20 mb-5 mx-auto
                 rounded-lg bg-glass p-2 w-[90%]'>
+                <div className="overflow-x-auto">
                 <table className=' w-full text-center'>
                     <thead className='border-b-2 mb-2'>
                         <th className='p-2'>Rank</th>
@@ -48,6 +49,7 @@ const TableExchanges = ({ data }: Props) => {
                         })}
                     </tbody>
                 </table>
+                </div>
             </div>
         </>
     )
